@@ -1,0 +1,28 @@
+.header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px 0;
+   background-color: #111;
+   & .logo {
+      color: #f1f1f1;
+      font-size: 24px;
+   }
+
+   .info {
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      a {
+         color: #aaa;
+      }
+      &__item:not(:last-child) {
+         margin-right: 15px;
+      }
+      .cart {
+         fill: rgb(87, 187, 83);
+         width: 30px;
+         height: 30px;
+      }
+   }   
+}
