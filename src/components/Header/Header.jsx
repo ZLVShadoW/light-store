@@ -1,8 +1,8 @@
 import React from 'react';
 import cl from './Header.module.scss';
-import { ReactComponent as Svg } from './../../assets/img/cart.svg';
 
-console.log(Svg)
+// one of the ways to import svg 
+import { ReactComponent as Svg } from './../../assets/img/cart.svg';
 
 export const Header = () => {
    return (
