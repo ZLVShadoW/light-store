@@ -1,7 +1,8 @@
 import React from 'react';
+import { Button } from '../Button/Button';
 import cl from './Cart.module.scss'
 
-export const Cart = ({ src, title, price }) => {
+export const Cart = ({ src, title, price, id }) => {
    return (
       <div className={cl.cart}>
          <div className={cl.cart__img}>
@@ -11,7 +12,9 @@ export const Cart = ({ src, title, price }) => {
          <div className={cl.cart__footer}>
             <div className={cl.cart__price}>price: <span>{price}</span></div>
             <div>
-               <button>Add</button>
+               <Button onClick={() => { console.log('clecked', id) }}>
+                  Add to cart
+               </Button>
             </div>
          </div>
       </div>

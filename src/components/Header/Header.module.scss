@@ -1,9 +1,12 @@
 .header {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
    padding: 15px 0;
    background-color: #111;
+   .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 35px;
+   }
    & .logo {
       color: #f1f1f1;
       font-size: 24px;

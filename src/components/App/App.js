@@ -1,5 +1,7 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { ApiService } from '../../api';
+import { fetchSaddles } from '../../store/actions/actions';
 import { Cart } from '../Cart/Cart';
 import { Header } from '../Header/Header';
 import cl from './App.module.scss'
@@ -8,19 +10,21 @@ import cl from './App.module.scss'
 // <img src={im} />
 
 console.log('im');
-let api = new ApiService;
 
 function App() {
-   const [items, setItems] = React.useState([])
+   // const [items, setItems] = React.useState([])
+
+   const saddles = useSelector(state => state.saddles.saddles)
+   const dispatch = useDispatch()
 
    React.useEffect(() => {
-      api.getSaddles().then(res => setItems(res))
+      dispatch(fetchSaddles())
    }, [])
    return (
       <>
          <Header />
          <div className={cl.container}>
-            {items.map(item => <Cart key={item.id} {...item} />)}
+            {saddles.map(item => <Cart key={item.id} {...item} />)}
          </div>
       </>
    );
