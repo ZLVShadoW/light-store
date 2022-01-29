@@ -1,6 +1,6 @@
 import { ApiService } from '../../api'
 
-const apiService = new ApiService;
+const apiService = new ApiService();
 
 const saddlesRequested = () => {
    return {
@@ -22,7 +22,7 @@ const saddlesError = (error) => {
 
 export const addedToCart = (saddle) => {
    return {
-      type: 'ADDED_TO_CART',
+      type: 'SADDLE_ADDED_TO_CART',
       payload: saddle
    }
 }
