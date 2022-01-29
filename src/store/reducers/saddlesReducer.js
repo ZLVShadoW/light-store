@@ -1,10 +1,19 @@
-const initial = {
-   saddles: [],
-   loading: false,
-   error: null
-}
+// const initial = {
+//    saddles: [],
+//    loading: false,
+//    error: null
+// }
 
-export const saddlesReducer = (state = initial, action) => {
+export const saddlesReducer = (state, action) => {
+
+
+   if (state === undefined) {
+      return {
+         saddles: [],
+         loading: false,
+         error: null
+      }
+   }
    switch (action.type) {
       case 'FETCH_SADDLES_REQUEST':
          return { ...state, loading: true }

@@ -20,6 +20,13 @@ const saddlesError = (error) => {
    }
 }
 
+export const addedToCart = (saddle) => {
+   return {
+      type: 'ADDED_TO_CART',
+      payload: saddle
+   }
+}
+
 export const fetchSaddles = () => (dispatch) => {
    dispatch(saddlesRequested())
    apiService.getSaddles()
