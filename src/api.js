@@ -72,7 +72,7 @@ export class ApiService {
       return new Promise((res, rej) => {
          setTimeout(() => {
             res(data)
-         }, 1700)
+         }, 700)
       })
    }
 }
