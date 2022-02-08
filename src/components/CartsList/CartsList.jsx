@@ -25,7 +25,7 @@ export const CartsList = ({ saddles }) => {
       <>
          {saddles.map(saddle => {
             let count = countInCart(saddle)
-            return <Cart key={saddle.id} {...saddle} isAdded={count} addToCart={() => addToCart(saddle)} />
+            return <Cart key={saddle.id} {...saddle} added={count} addToCart={() => addToCart(saddle)} />
          })
          }
       </>
