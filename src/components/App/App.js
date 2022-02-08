@@ -12,7 +12,6 @@ import cl from './App.module.scss'
 // <img src={im} />
 
 function App() {
-   // const [items, setItems] = React.useState([])
 
    const { saddles, loading, error } = useSelector(state => state.saddles)
    const dispatch = useDispatch()

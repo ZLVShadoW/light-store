@@ -10,6 +10,7 @@ export const CartsList = ({ saddles }) => {
    const addToCart = (saddle) => {
       dispatch(addedToCart(saddle))
    }
+
    return (
       <>
          {saddles.map(saddle => <Cart key={saddle.id} {...saddle} addToCart={() => addToCart(saddle)} />)}

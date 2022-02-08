@@ -20,9 +20,6 @@ const updateSaddle = (item = {}, saddle) => {
 
 const updateItems = (items, saddle, isItem) => {
 
-   if (items.length < 1) {
-      return [...items, saddle]
-   }
    if (isItem) {
       return items = items.map(el => {
          if (el.id === saddle.id) {
