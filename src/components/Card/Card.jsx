@@ -1,9 +1,10 @@
 import React from 'react';
 
 import { Button } from '../Button/Button';
-import cl from './Cart.module.scss'
+import cl from './Card.module.scss'
 
-export const Cart = ({ src, title, price, addToCart, added }) => {
+// export const Cart = ({ src, title, price, addToCart, added }) => {
+export const Card = ({ src, title, price, addToCart, added }) => {
 
    return (
       <div className={cl.cart}>

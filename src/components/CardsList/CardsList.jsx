@@ -1,10 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { Cart } from '../Cart/Cart';
+import { Card } from '../Card/Card';
 import { addedToCart } from '../../store/actions/actions';
 
-export const CartsList = ({ saddles }) => {
+export const CardsList = ({ saddles }) => {
 
    const dispatch = useDispatch();
    const addToCart = (saddle) => {
@@ -25,7 +25,7 @@ export const CartsList = ({ saddles }) => {
       <>
          {saddles.map(saddle => {
             let count = countInCart(saddle)
-            return <Cart key={saddle.id} {...saddle} added={count} addToCart={() => addToCart(saddle)} />
+            return <Card key={saddle.id} {...saddle} added={count} addToCart={() => addToCart(saddle)} />
          })
          }
       </>
