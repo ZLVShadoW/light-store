@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Card } from '../Card/Card';
+import { CardInfo } from '../CardInfo/CardInfo';
+
+import cn from './CartPage.module.scss';
 
 export const CartPage = () => {
 
@@ -8,8 +10,8 @@ export const CartPage = () => {
 
    return (
       <>
-         {items.map(item => (<Card key={item.id} {...item} />))}
-         <div>{total}</div>
+         {items.map(item => (<CardInfo key={item.id} {...item} />))}
+         <div className={cn.wrapper}>{total}</div>
       </>
    )
 }
