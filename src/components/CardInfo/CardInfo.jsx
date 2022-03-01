@@ -1,4 +1,5 @@
 import React from 'react';
+import { OrderCount } from '../OrdeCount/OrderCount';
 
 
 import cn from './CardInfo.module.scss';
@@ -14,6 +15,7 @@ export const CardInfo = ({ src, title, weight, description }) => {
             <div className={cn.card__opt}>{weight}</div>
             <div className={cn.card__description}>{description}</div>
          </div>
+         <OrderCount />
       </div>
    )
 }

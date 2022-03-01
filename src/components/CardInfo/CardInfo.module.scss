@@ -4,12 +4,15 @@
    flex-wrap: wrap;
    justify-content: space-between;
    align-items: flex-start;
+   margin-bottom: 25px;
+   padding: 15px 0;
+   border-bottom: 1px solid #ccc;
    &__img {
-      width: 30%;
       border: 1px solid red;
+      margin-right: 15px;
    }
    &__info {
-      width: 60%;
+      flex-grow: 1;
       border: 1px solid red;
    }
 }

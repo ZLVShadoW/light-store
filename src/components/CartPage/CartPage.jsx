@@ -9,9 +9,9 @@ export const CartPage = () => {
    const { items, total } = useSelector(state => state.cart)
 
    return (
-      <>
+      <div className={cn.wrapper}>
          {items.map(item => (<CardInfo key={item.id} {...item} />))}
-         <div className={cn.wrapper}>{total}</div>
-      </>
+         <div>{total}</div>
+      </div>
    )
 }
